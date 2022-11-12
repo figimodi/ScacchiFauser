@@ -1,0 +1,112 @@
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\MainWindow.g.cs
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\App.g.cs
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\MainWindow.baml
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\App.baml
+F:\Progetti\Scacchi2018-2019\Client\bin\Debug\Client.exe.config
+F:\Progetti\Scacchi2018-2019\Client\bin\Debug\Client.exe
+F:\Progetti\Scacchi2018-2019\Client\bin\Debug\Client.pdb
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\MainWindow.g.cs
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\App.g.cs
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.cache
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.lref
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\App.baml
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\MainWindow.baml
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.g.resources
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.Properties.Resources.resources
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.exe
+F:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.pdb
+H:\Progetti\Scacchi2018-2019\Client\bin\Debug\Client.exe.config
+H:\Progetti\Scacchi2018-2019\Client\bin\Debug\Client.exe
+H:\Progetti\Scacchi2018-2019\Client\bin\Debug\Client.pdb
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\MainWindow.g.cs
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\App.g.cs
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.cache
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.lref
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\App.baml
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\MainWindow.baml
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.g.resources
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.Properties.Resources.resources
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.csproj.GenerateResource.Cache
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.exe
+H:\Progetti\Scacchi2018-2019\Client\obj\Debug\Client.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\bin\Debug\Client.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\bin\Debug\Client.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\bin\Debug\Client.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\MainWindow.g.cs
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\App.g.cs
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.lref
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\App.baml
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\MainWindow.baml
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.g.resources
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\bin\Debug\Client.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\bin\Debug\Client.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\bin\Debug\Client.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\MainWindow.g.cs
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\App.g.cs
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client_MarkupCompile.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client_MarkupCompile.lref
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\App.baml
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\MainWindow.baml
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client.g.resources
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Client\obj\Debug\Client.pdb
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\bin\Debug\Client.exe.config
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\bin\Debug\Client.exe
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\bin\Debug\Client.pdb
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\MainWindow.g.cs
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\App.g.cs
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.lref
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\App.baml
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\MainWindow.baml
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.g.resources
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.csproj.GenerateResource.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.csproj.CopyComplete
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.exe
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Client\obj\Debug\Client.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\bin\Debug\Client.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\bin\Debug\Client.exe.manifest
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\bin\Debug\Client.application
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\bin\Debug\Client.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\bin\Debug\Client.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client_MarkupCompile.lref
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.g.resources
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.Properties.Resources.resources
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.exe.manifest
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.application
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Client\obj\Debug\Client.TrustInfo.xml

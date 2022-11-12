@@ -1,0 +1,40 @@
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csproj.CopyComplete
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\bin\Debug\DatabaseManager.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\bin\Debug\DatabaseManager.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\bin\Debug\DatabaseManager.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\obj\Debug\DatabaseManager.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\obj\Debug\DatabaseManager.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\obj\Debug\DatabaseManager.csproj.CopyComplete
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\obj\Debug\DatabaseManager.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\DatabaseManager\obj\Debug\DatabaseManager.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csproj.CopyComplete
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.exe.config
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.exe
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\DatabaseManager.pdb
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.csproj.CopyComplete
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.exe
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\DatabaseManager\obj\Debug\DatabaseManager.pdb

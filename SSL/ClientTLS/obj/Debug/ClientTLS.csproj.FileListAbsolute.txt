@@ -1,0 +1,6 @@
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ClientTLS\obj\Debug\ClientTLS.csproj.CoreCompileInputs.cache
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ClientTLS\bin\Debug\ClientTLS.exe.config
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ClientTLS\bin\Debug\ClientTLS.exe
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ClientTLS\bin\Debug\ClientTLS.pdb
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ClientTLS\obj\Debug\ClientTLS.exe
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ClientTLS\obj\Debug\ClientTLS.pdb

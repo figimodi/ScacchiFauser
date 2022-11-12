@@ -1,0 +1,5 @@
+Nessun dato esistente per la riga/colonna.
+Riferimento a un oggetto non impostato su un'istanza di oggetto.
+Riferimento a un oggetto non impostato su un'istanza di oggetto.
+È già stato aggiunto un elemento con la stessa chiave.
+Nome di colonna non valido. [ Node name (if any) = ,Column name = date ]

@@ -1,0 +1,53 @@
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\bin\Debug\Server.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\bin\Debug\Server.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\bin\Debug\Server.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\obj\Debug\Server.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\obj\Debug\Server.pdb
+F:\Progetti\Scacchi2018-2019\Server\bin\Debug\Server.exe.config
+F:\Progetti\Scacchi2018-2019\Server\bin\Debug\Server.exe
+F:\Progetti\Scacchi2018-2019\Server\bin\Debug\Server.pdb
+F:\Progetti\Scacchi2018-2019\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+F:\Progetti\Scacchi2018-2019\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+F:\Progetti\Scacchi2018-2019\Server\obj\Debug\Server.exe
+F:\Progetti\Scacchi2018-2019\Server\obj\Debug\Server.pdb
+H:\Progetti\Scacchi2018-2019\Server\bin\Debug\Server.exe.config
+H:\Progetti\Scacchi2018-2019\Server\obj\Debug\Server.exe
+H:\Progetti\Scacchi2018-2019\Server\obj\Debug\Server.pdb
+H:\Progetti\Scacchi2018-2019\Server\bin\Debug\Server.exe
+H:\Progetti\Scacchi2018-2019\Server\bin\Debug\Server.pdb
+H:\Progetti\Scacchi2018-2019\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\bin\Debug\Server.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\bin\Debug\Server.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\bin\Debug\Server.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Scacchi2018-2019\Server\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\bin\Debug\Server.exe.config
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\bin\Debug\Server.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\bin\Debug\Server.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\obj\Debug\Server.exe
+C:\Users\Filippo\Desktop\Scacchi2018-2019 - Copia\Server\obj\Debug\Server.pdb
+C:\Users\Filippo\Desktop\Scacchi2018-2019\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\bin\Debug\Server.exe.config
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\bin\Debug\Server.exe
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\bin\Debug\Server.pdb
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\bin\Debug\IT\System.Data.SqlServerCe.resources.dll
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.csproj.CopyComplete
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.exe
+C:\Users\Filippo\Desktop\ScacchiSSL2018-2019\Scacchi2018-2019\Server\obj\Debug\Server.pdb

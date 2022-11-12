@@ -1,0 +1,462 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+         Title="Scacchi" Icon="img/personal_icon.ico" Height="600" Width="1000" WindowStartupLocation="CenterScreen" MinHeight="600" MinWidth="1000">
+    <Window.Background>
+        <ImageBrush ImageSource="img/background.jpg"/>
+    </Window.Background>
+    <Viewbox>
+        <Grid Height="1080" Width="1920">
+            <Canvas Height="1080" Width="1920" x:Name="Canvas_Log" Visibility="Visible" IsVisibleChanged="InitalizeCanvasLog">
+
+                <!-- LABEL,TEXTBOX,PASSWORDBOX -->
+                <Label x:Name="lblError" Width="600" Height="70" FontSize="20" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF990E0E" Canvas.Left="665" Canvas.Top="285"/>
+                <TextBox x:Name="txtEmail" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="Gray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Text="E-mail" Background="#7F000000" Canvas.Left="665" Canvas.Top="350" Visibility="Hidden" GotFocus="TextFocus" LostFocus="TextLostFocus" KeyDown="InvioDaTastiera"/>
+                <TextBox x:Name="txtUser" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="Gray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Text="Username" Background="#7F000000" Canvas.Left="665" Canvas.Top="430" GotFocus="TextFocus" LostFocus="TextLostFocus" KeyDown="InvioDaTastiera"/>
+                <TextBox x:Name="txtPassword" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="Gray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Text="Password" Background="#7F000000" Canvas.Left="665" Canvas.Top="510" GotFocus="TextFocus" LostFocus="TextLostFocus" KeyDown="InvioDaTastiera"/>
+                <PasswordBox x:Name="pswPassword" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#7F000000" Visibility="Hidden" Foreground="LightYellow" Canvas.Left="665" Canvas.Top="510" LostFocus="PasswordLostFocus" KeyDown="InvioDaTastiera"/>
+                <TextBox x:Name="txtPasswordConfirm" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="Gray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Text="Conferma Password" Background="#7F000000" Canvas.Left="665" Canvas.Top="590" Visibility="Hidden" GotFocus="TextFocus" LostFocus="TextLostFocus" KeyDown="InvioDaTastiera"/>
+                <PasswordBox x:Name="pswPasswordConfirm" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#7F000000" Foreground="LightYellow" Canvas.Left="665" Canvas.Top="590" Visibility="Hidden" LostFocus="PasswordLostFocus" KeyDown="InvioDaTastiera"/>
+
+                <!-- BOTTONI -->
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnShowPassword" Width="40" Height="40" BorderBrush="{x:Null}" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Visibility="Hidden"  Canvas.Left="1210" Canvas.Top="525" Click="ShowPassword">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/eye.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnShowPasswordConfirm" Width="40" Height="40" BorderBrush="{x:Null}" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Visibility="Hidden"  Canvas.Left="1210" Canvas.Top="605" Click="ShowPassword">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/eye.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnReturn" Margin="70" Width="100" Height="100" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="{x:Null}" Visibility="Hidden" Click="Return">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/backArrow.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnLogIn" Width="300" Height="70" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Log In" Canvas.Left="816" Canvas.Top="680" Click="LogIn"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnRegistrati" Width="300" Height="70" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Registrati" Canvas.Left="816" Canvas.Top="760" Click="Registrati"/>
+
+                <!-- IMMAGINI -->
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+                <Image Width="471" Height="229" Source="img/header.png" Canvas.Left="739" Canvas.Top="31"></Image>
+            </Canvas>
+
+            <Canvas  Height="1080" Width="1920" x:Name="Canvas_Menu" Visibility="Hidden" IsVisibleChanged="InitalizeCanvasMenu">
+
+                <!-- LABEL -->
+                <Label x:Name="lblUsername" Content="giocatore1" Canvas.Top="131" Canvas.Left="1055" Width="555" Height="59" FontSize="50" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF630000"/>
+                <Label x:Name="lblGrado" Content="Grande Maestro" Canvas.Top="120" Width="500" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FFFFD100" Canvas.Left="370"/>
+                <Label x:Name="lblPunteggio" Content="1800" Canvas.Top="170" Canvas.Left="747" Width="123" Height="50" FontSize="30" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="White"/>
+
+                <!-- BOTTONI MODALITA -->
+                <Button Style="{StaticResource MenuButton}" x:Name="btnGiocaOnline" Canvas.Left="170" Canvas.Top="300" Width="520" Height="300" BorderBrush="Black" BorderThickness="4" FontSize="50" FontFamily="Copperplate Gothic Light" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#E5FFFFFF" Click="btnGiocaOnlineClick" FontWeight="Bold"/>
+                <Button Style="{StaticResource MenuButton}" x:Name="btnGiocaConAmici" Canvas.Left="170" Canvas.Top="605" Width="520" Height="300" BorderBrush="Black" BorderThickness="4" FontSize="50" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC0A0A0A"  Click="btnGiocaConAmiciClick" />
+                <Button Style="{StaticResource MenuButton}" x:Name="btnClassifiche" Canvas.Right="170" Canvas.Top="300" Width="520" Height="300" BorderBrush="Black" BorderThickness="4" FontSize="40" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CCFFFFFF"  Click="btnClassificheClick" Canvas.Left="1230" />
+                <Button Style="{StaticResource MenuButton}" x:Name="btnProfilo" Canvas.Right="435" Canvas.Top="605" Width="520" Height="300" BorderBrush="Black" BorderThickness="4" FontSize="40" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Click="btnProfiloClick" Canvas.Left="1230"/>
+
+                <Button Style="{StaticResource MenuButton}" x:Name="btnGuardaReplay" Canvas.Left="700" Canvas.Top="300" Width="520" Height="300" BorderBrush="Black" BorderThickness="4" FontSize="50" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000"  Click="btnGuardaReplayClick" />
+                <Button Style="{StaticResource MenuButton}" x:Name="btnGuardaLive" Canvas.Left="700" Canvas.Top="605" Width="520" Height="300" BorderBrush="Black" BorderThickness="4" FontSize="50" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#E5FFFFFF" Click="btnGuardaLiveClick" />
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnLogOut" Canvas.Right="80" Margin="120" Width="80" Height="80" BorderBrush="{x:Null}" Visibility="Visible" Click="LogOut">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/logOut.png"/>
+                    </Button.Background>
+                </Button>
+                <!-- IMMAGINI -->
+                <Image x:Name="imgAvatar" Width="160" Height="160" Canvas.Left="885" Canvas.Top="85" Source="img/avatar/256_0.png"></Image>
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+
+                <!-- BOTTONI MENU -->
+            </Canvas>
+
+            <Canvas Height="1080" Width="1920" x:Name="Canvas_Matchmaking" Visibility="Hidden" IsVisibleChanged="InitalizeCanvasMatchmaking">
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+                <Image Width="500" Height="250" Canvas.Left="710" Canvas.Top="10" Source="img/header.png"></Image>
+                <Image x:Name="imgLoading" Width="100" Height="120" Canvas.Left="910" Canvas.Top="480" Source="img/loading.png" RenderTransformOrigin=".5,.5"></Image>
+                <Label x:Name="lblErrorMatchmaking" Content="Cercando giocatori..." Canvas.Left="663" Canvas.Top="630" Width="600" Height="70" FontSize="20" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF990E0E"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnAnnulla" Canvas.Left="840" Canvas.Top="730" Width="250" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Annulla" Click="Annulla"/>
+            </Canvas>
+
+            <Canvas Height="1080" Width="1920" x:Name="Canvas_ModalitaOnline" Visibility="Hidden" IsVisibleChanged="InitalizeCanvasPartita">
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+
+
+                <Image x:Name="imgAvatarOpponent" Width="120" Height="120" Canvas.Right="750"  Canvas.Top="80" Source="img/avatar/256_0.png"></Image>
+                <Label x:Name="lblInfo1_1" Content="torre146 " Canvas.Left="1184" Canvas.Top="83" Width="400" Height="40" FontSize="20" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black"/>
+                <Label x:Name="lblPunteggioOpponent" Content="1000 " Canvas.Left="1184" Canvas.Top="123" Width="90" Height="40" FontSize="20" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black" RenderTransformOrigin="0.522,0.009"/>
+                <Label x:Name="lblGradoOpponent" Content="Grande Maestro " Canvas.Left="1184" Canvas.Top="160" Width="266" Height="40" FontSize="20" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black"/>
+
+                <Grid x:Name="Scacchiera" Canvas.Left="70" Canvas.Top="50" Height="854"  Width="854" PreviewMouseLeftButtonDown="Chessboard_PreviewMouseLeftButtonDown">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="106*"/>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="106*"/>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="107*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="106*"/>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="106*"/>
+                        <ColumnDefinition Width="108*"/>
+                        <ColumnDefinition Width="107*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="img/scacchiera.png"/>
+                    </Grid.Background>
+
+                    <!-- PEZZI BIANCHI -->
+                    <Image x:Name="tBsx" Width="80" Height="80" Source="img/torreB.png" Grid.Row="7" />
+                    <Image x:Name="cBsx" Width="80" Height="80" Source="img/cavallosxB.png" Grid.Column="1" Grid.Row="7" />
+                    <Image x:Name="aBsx" Width="80" Height="80" Source="img/alfiereB.png" Grid.Column="2" Grid.Row="7" />
+                    <Image x:Name="rgB" Width="80" Height="80" Source="img/reginaB.png" Grid.Column="3" Grid.Row="7" />
+                    <Image x:Name="reB" Width="80" Height="80" Source="img/reB.png" Grid.Column="4" Grid.Row="7" />
+                    <Image x:Name="aBdx" Width="80" Height="80" Source="img/alfiereB.png" Grid.Column="5" Grid.Row="7" />
+                    <Image x:Name="cBdx" Width="80" Height="80" Source="img/cavallodxB.png" Grid.Column="6" Grid.Row="7" />
+                    <Image x:Name="tBdx" Width="80" Height="80" Source="img/torreB.png" Grid.Column="7" Grid.Row="7" />
+                    <Image x:Name="pB1" Width="80" Height="80" Source="img/pedoneB.png" Grid.Row="6" />
+                    <Image x:Name="pB2" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="1" Grid.Row="6" />
+                    <Image x:Name="pB3" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="2" Grid.Row="6" />
+                    <Image x:Name="pB4" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="3" Grid.Row="6" />
+                    <Image x:Name="pB5" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="4" Grid.Row="6" />
+                    <Image x:Name="pB6" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="5" Grid.Row="6" />
+                    <Image x:Name="pB7" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="6" Grid.Row="6" />
+                    <Image x:Name="pB8" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="7" Grid.Row="6" />
+
+                    <!-- PEZZI NERI -->
+                    <Image x:Name="tNsx" Width="80" Height="80" Source="img/torreN.png"/>
+                    <Image x:Name="cNsx" Width="80" Height="80" Source="img/cavallosxN.png" Grid.Column="1" />
+                    <Image x:Name="aNsx" Width="80" Height="80" Source="img/alfiereN.png" Grid.Column="2" />
+                    <Image x:Name="rgN" Width="80" Height="80" Source="img/reginaN.png" Grid.Column="3" />
+                    <Image x:Name="reN" Width="80" Height="80" Source="img/reN.png" Grid.Column="4" />
+                    <Image x:Name="aNdx" Width="80" Height="80" Source="img/alfiereN.png" Grid.Column="5" />
+                    <Image x:Name="cNdx" Width="80" Height="80" Source="img/cavallodxN.png" Grid.Column="6" />
+                    <Image x:Name="tNdx" Width="80" Height="80" Source="img/torreN.png" Grid.Column="7" />
+                    <Image x:Name="pN1" Width="80" Height="80" Source="img/pedoneN.png" Grid.Row="1" />
+                    <Image x:Name="pN2" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="1" Grid.Row="1" />
+                    <Image x:Name="pN3" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="2" Grid.Row="1" />
+                    <Image x:Name="pN4" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="3" Grid.Row="1" />
+                    <Image x:Name="pN5" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="4" Grid.Row="1" />
+                    <Image x:Name="pN6" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="5" Grid.Row="1" />
+                    <Image x:Name="pN7" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="6" Grid.Row="1" />
+                    <Image x:Name="pN8" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="7" Grid.Row="1" />
+                </Grid>
+
+                <Grid x:Name="InvioChat" Height="654" Width="854" Canvas.Right="70" Canvas.Top="250" Background="White" Opacity="0.8">
+                    <RichTextBox x:Name="lblChat" ScrollViewer.VerticalScrollBarVisibility="Auto" Background="White" Padding="20" Width="854" Height="555" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontFamily="Global Sans Serif" IsReadOnly="True" HorizontalContentAlignment="Left" Block.LineHeight="6">
+                        <FlowDocument/>
+                    </RichTextBox>
+
+                    <Rectangle Fill="Black" Height="854" Width="3" HorizontalAlignment="Left"></Rectangle>
+                    <Rectangle Fill="Black" Height="854" Width="3" HorizontalAlignment="Right"></Rectangle>
+                    <Rectangle Fill="Black" Height="3" Width="854" VerticalAlignment="Bottom"></Rectangle>
+                    <Rectangle Fill="Black" Height="3" Width="854" VerticalAlignment="Top"></Rectangle>
+
+
+                    <TextBox x:Name="txtTestoInserimento" Text="Scrivi un messaggio ..." MaxLength="140" Width="830" Height="85" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10" TextWrapping="Wrap" Padding="18,10" CaretBrush="#FFCCDC2E" SelectionBrush="Black" BorderBrush="Black" BorderThickness="1" FontSize="20" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Foreground="Gray" GotFocus="InserimentoChatGotFocus" LostFocus="InserimentoChatLostFocus" KeyDown="SendChatMessage">
+                    </TextBox>
+                </Grid>
+
+                <Grid x:Name="Promotion" Height="400" Width="600" Canvas.Left="655" Canvas.Top="300" Background="Black" PreviewMouseLeftButtonDown="Promotion_PreviewMouseLeftButtonDown" Visibility="Hidden">
+                    <Label x:Name="lblPromozione" Content="Promzione" Width="600" Height="100" VerticalAlignment="Top" Margin="0,50" FontFamily="Copperplate Gothic Bold" Foreground="White" FontSize="72" HorizontalContentAlignment="Center"></Label>
+                    <Grid x:Name="PromotionPieces" Height="107" Width="428" VerticalAlignment="Bottom" Margin="0,100">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="107*"/>
+                            <ColumnDefinition Width="107*"/>
+                            <ColumnDefinition Width="107*"/>
+                            <ColumnDefinition Width="107*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image x:Name="tBsxP" Width="80" Height="80" Source="img/torreB.png" Grid.Row="0" Grid.Column="0"/>
+                        <Image x:Name="cBsxP" Width="80" Height="80" Source="img/cavallosxB.png" Grid.Column="1" Grid.Row="0"/>
+                        <Image x:Name="aBsxP" Width="80" Height="80" Source="img/alfiereB.png" Grid.Column="2" Grid.Row="0"/>
+                        <Image x:Name="rgBP" Width="80" Height="80" Source="img/reginaB.png" Grid.Column="3" Grid.Row="0"/>
+                        <Image x:Name="tNsxP" Width="80" Height="80" Source="img/torreN.png"  Grid.Column="0" Grid.Row="0"/>
+                        <Image x:Name="cNsxP" Width="80" Height="80" Source="img/cavallosxN.png" Grid.Column="1"  Grid.Row="0"/>
+                        <Image x:Name="aNsxP" Width="80" Height="80" Source="img/alfiereN.png" Grid.Column="2"  Grid.Row="0"/>
+                        <Image x:Name="rgNP" Width="80" Height="80" Source="img/reginaN.png" Grid.Column="3" Grid.Row="0"/>
+                    </Grid>
+                </Grid>
+
+                <Image x:Name="imgWin" Width="500" Height="500" Canvas.Left="1150" Canvas.Bottom="300" Visibility="Hidden" Source="img/winner.png"/>
+                <Image x:Name="imgDefeat" Width="500" Height="500" Canvas.Left="1150" Canvas.Bottom="300" Visibility="Hidden" Source="img/defeat.png"/>
+                <Image x:Name="imgDraw" Width="500" Height="500" Canvas.Left="1150" Canvas.Bottom="300" Visibility="Hidden" Source="img/draw.png"/>
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnReturnToMenu" Canvas.Right="40" Margin="70" Width="80" Height="80" BorderBrush="{x:Null}" Visibility="Visible" Click="ReturnToMenu">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/backArrow.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnPatta" Width="300" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Chiedi la patta" Canvas.Left="384" Canvas.Top="940" Click="AskForDraw"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnResa" Width="300" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Dichiara la resa" Canvas.Left="70" Canvas.Top="940" Click="DeclareDefeat"/>
+            </Canvas>
+
+            <Canvas Height="1080" Width="1920" x:Name="Canvas_Profilo" Visibility="Hidden" IsVisibleChanged="InitalizeCanvasProfilo">
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnProfiloToHome" Canvas.Right="80" Width="80" Height="80" BorderBrush="{x:Null}" Visibility="Visible" Click="ReturnToMenu" Canvas.Left="1646" Canvas.Top="74">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/backArrow.png"/>
+                    </Button.Background>
+                </Button>
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+                <Image x:Name="imgAvatarProfilo" Width="256" Height="256" Canvas.Left="798"  Canvas.Top="90" Source="img/avatar/256_0.png"></Image>
+
+                <Label x:Name="lblProfiloUsername" Content="giocatore" Canvas.Top="174" Canvas.Left="1069" Width="666" Height="80" FontSize="55" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF630000"/>
+                <Label x:Name="lblProfiloGrado" Content="Grande Maestro" Canvas.Top="161" Canvas.Left="270" Width="500" Height="50" FontSize="40" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FFFFD100"/>
+                <Label x:Name="lblProfiloPunteggio" Content="1800" Canvas.Top="220" Canvas.Left="639" Width="131" Height="50" FontSize="30" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="White"/>
+                <Label x:Name="lblProfiloError" Padding="20,0" Width="645" Height="50" FontSize="23" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF990E0E" Canvas.Left="855" Canvas.Top="365"/>
+
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnCambiaAvatar" Canvas.Left="194" Canvas.Top="523" Width="270" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Cambia avatar" Click="CambiaAvatar"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnCambiaPassword" Canvas.Left="194" Canvas.Top="583" Width="270" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Cambia password" Click="CambiaPassword"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnStatistiche" Canvas.Left="194" Canvas.Top="643" Width="270" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Statistiche" Click="VisualizzaStatistiche"/>
+
+                <Grid x:Name="GridStatistiche" Background="White" Opacity="0.9" Height="400" Width="1000" Canvas.Left="500" Canvas.Right="500" Canvas.Top="420" Visibility="Visible">
+                    <Label Content="Partite giocate: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,50" Width="360" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF630000"/>
+                    <Label Content="Partite vinte: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,100" Width="360" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF630000"/>
+                    <Label Content="Partite pareggiate: " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,150" Width="360" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF630000"/>
+                    <Label Content="Partite perse: " HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="50,150" Width="360" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF630000"/>
+                    <Label x:Name="lblPartiteGiocate" Content="xxx" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,50" Width="150" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black"/>
+                    <Label x:Name="lblPartiteVinte" Content="xxx" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,100" Width="150" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black"/>
+                    <Label x:Name="lblPartitePareggiate" Content="xxx" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="430,150" Width="150" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black"/>
+                    <Label x:Name="lblPartitePerse" Content="xxx" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="430,150" Width="150" Height="50" FontSize="33" FontFamily="Copperplate Gothic Light" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black"/>
+                </Grid>
+
+                <Grid x:Name="GridCambiaAvatar" Background="White" Opacity="0.9" Height="420" Width="1000" Canvas.Left="500" Canvas.Right="500" Canvas.Top="420" Visibility="Hidden" PreviewMouseLeftButtonDown="ChooseAvatar">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="256*"/>
+                        <RowDefinition Height="256*"/>
+                        <RowDefinition Height="256*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="256*"/>
+                        <ColumnDefinition Width="256*"/>
+                        <ColumnDefinition Width="256*"/>
+                        <ColumnDefinition Width="256*"/>
+                        <ColumnDefinition Width="256*"/>
+                        <ColumnDefinition Width="256*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image x:Name="avatar0" Width="100" Height="100" Source="img/avatar/256_0.png"/>
+                    <Image x:Name="avatar1" Width="100" Height="100" Source="img/avatar/256_1.png" Grid.Column="1"/>
+                    <Image x:Name="avatar2" Width="100" Height="100" Source="img/avatar/256_2.png" Grid.Column="2"/>
+                    <Image x:Name="avatar3" Width="100" Height="100" Source="img/avatar/256_3.png" Grid.Column="3"/>
+                    <Image x:Name="avatar4" Width="100" Height="100" Source="img/avatar/256_4.png" Grid.Column="4"/>
+                    <Image x:Name="avatar5" Width="100" Height="100" Source="img/avatar/256_5.png" Grid.Column="5"/>
+                    <Image x:Name="avatar6" Width="100" Height="100" Source="img/avatar/256_6.png" Grid.Column="0" Grid.Row="1"/>
+                    <Image x:Name="avatar7" Width="100" Height="100" Source="img/avatar/256_7.png" Grid.Column="1" Grid.Row="1"/>
+                    <Image x:Name="avatar8" Width="100" Height="100" Source="img/avatar/256_8.png" Grid.Column="2" Grid.Row="1"/>
+                    <Image x:Name="avatar9" Width="100" Height="100" Source="img/avatar/256_9.png" Grid.Column="3" Grid.Row="1"/>
+                    <Image x:Name="avatar10" Width="100" Height="100" Source="img/avatar/256_10.png" Grid.Column="4" Grid.Row="1"/>
+                    <Image x:Name="avatar11" Width="100" Height="100" Source="img/avatar/256_11.png" Grid.Column="5" Grid.Row="1"/>
+                    <Image x:Name="avatar12" Width="100" Height="100" Source="img/avatar/256_12.png" Grid.Column="0" Grid.Row="2"/>
+                    <Image x:Name="avatar13" Width="100" Height="100" Source="img/avatar/256_13.png" Grid.Column="1" Grid.Row="2"/>
+                    <Image x:Name="avatar14" Width="100" Height="100" Source="img/avatar/256_14.png" Grid.Column="2" Grid.Row="2"/>
+                    <Image x:Name="avatar15" Width="100" Height="100" Source="img/avatar/256_15.png" Grid.Column="3" Grid.Row="2"/>
+                    <Image x:Name="avatar16" Width="100" Height="100" Source="img/avatar/256_16.png" Grid.Column="4" Grid.Row="2"/>
+                </Grid>
+
+                <Grid x:Name="GridCambiaPassword" Background="White" Opacity="0.9" Height="400" Width="1000" Canvas.Left="500" Canvas.Right="500" Canvas.Top="420" Visibility="Hidden">
+                    <Label x:Name="lblCambiaPasswordError" Width="600" Height="50" FontSize="23" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF990E0E" VerticalAlignment="Bottom" Margin="0,100"/>
+                    <TextBox x:Name="txtCambiaPassword" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Text="Password" Background="#7F000000" GotFocus="TextFocusProfilo" LostFocus="TextLostFocusProfilo" Margin="0,60" VerticalAlignment="Top" HorizontalAlignment="Center" KeyDown="CambiaPasswordTastiera"/>
+                    <PasswordBox x:Name="pswCambiaPassword" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#7F000000" Visibility="Hidden" Foreground="LightYellow"  LostFocus="PasswordLostFocusProfilo" Margin="0,60" VerticalAlignment="Top" HorizontalAlignment="Center" KeyDown="CambiaPasswordTastiera"/>
+                    <TextBox x:Name="txtCambiaPasswordConfirm" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Text="Conferma Password" Background="#7F000000" GotFocus="TextFocusProfilo" LostFocus="TextLostFocusProfilo" Margin="0,150" VerticalAlignment="Top" HorizontalAlignment="Center" KeyDown="CambiaPasswordTastiera"/>
+                    <PasswordBox x:Name="pswCambiaPasswordConfirm" Width="600" Height="70" CaretBrush="#FFCCDC2E" SelectionBrush="#FFB0B0B0" BorderBrush="Black" BorderThickness="4" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#7F000000" Foreground="LightYellow" Visibility="Hidden" LostFocus="PasswordLostFocusProfilo" Margin="0,150" VerticalAlignment="Top" HorizontalAlignment="Center" KeyDown="CambiaPasswordTastiera"/>
+                    <Button Style="{StaticResource MenuButton}" x:Name="btnCambiaPasswordInvio" Width="270" Height="50" BorderBrush="White" BorderThickness="4" FontSize="24" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Bottom" Margin="0,30" Block.TextAlignment="Center" Background="Black" Content="Cambia password" Click="CambiaPasswordPulsante"/>
+                    <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnShowCambiaPassword" Width="40" Height="40" BorderBrush="{x:Null}" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Visibility="Hidden" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="220,75" Click="ShowCambiaPassword">
+                        <Button.Background>
+                            <ImageBrush ImageSource="img/eye.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnShowCambiaPasswordConfirm" Width="40" Height="40" BorderBrush="{x:Null}" FontSize="36" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Visibility="Hidden"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="220,165" Click="ShowCambiaPassword">
+                        <Button.Background>
+                            <ImageBrush ImageSource="img/eye.png" Stretch="Uniform"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Canvas>
+
+            <Canvas Height="1080" Width="1920" x:Name="Canvas_GiocaConAmici" Visibility="Hidden" IsVisibleChanged="InitalizeCanvasGiocaConAmici">
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnGiocaConAmiciToHome" Canvas.Right="80" Width="80" Height="80" BorderBrush="{x:Null}" Visibility="Visible" Click="ReturnToMenu" Canvas.Left="1646" Canvas.Top="74">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/backArrow.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+
+                <TextBox x:Name="txtCercaAmici" Text="Cerca Amici" Padding="20,0" Width="645" Height="50" FontSize="23" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black" Canvas.Left="890" Canvas.Top="125" Opacity="0.9" GotFocus="BarraCercaAmiciGotFocus" LostFocus="BarraCercaAmiciLostFocus" KeyDown="BarraCercaAmiciInvioDaTastiera"/>
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnCercaAmici" Canvas.Right="80" Width="54" Height="50" BorderBrush="{x:Null}" Visibility="Visible" Click="CercaAmiciBottone" Canvas.Left="1543" Canvas.Top="125">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/search.png"/>
+                    </Button.Background>
+                </Button>
+                <Grid x:Name="GridGiocaConAmiciResult" Height="700" Width="1650" Background="White" Opacity="0.9" Canvas.Left="135" Canvas.Top="180">
+                    <Label x:Name="lblErrorGiocaConAmici" Height="80" Width="700" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF630000" Content="Non hai amici al momento" Background="White"></Label>
+                    <Label x:Name="lblListName" Height="45" Width="400" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#FF630000" Content="Amici" Background="White" Margin="25,0,0,0"></Label>
+                    <ListBox x:Name="lstAmici" Background="Transparent" Height="600" Width="1600" Visibility="Visible" FontSize="30" Padding="10" MouseDoubleClick="VisualizzaProfiloAmico">
+                    </ListBox>
+                </Grid>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnRichiesteAmicizia" Canvas.Left="361" Canvas.Top="892" Width="305" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Richieste d'amicizia" Click="RichiestaAmiciziaBottone"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnBackToAmici" Canvas.Left="135" Canvas.Top="892" Width="212" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Amici" Click="btnBackToAmiciClick"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnStartMatchAmici" Canvas.Left="135" Canvas.Top="121" Width="300" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Invita a giocare" Click="InviaRichiestaDiGioco"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnAccettaAmici" Canvas.Left="135" Canvas.Top="121" Width="212" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Accetta" Click="AccettaRichiestaAmicizia"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnRifiutaAmici" Canvas.Left="361" Canvas.Top="121" Width="212" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Rifiuta" Click="RifiutaRichiestaAmicizia"/>
+                <Button Style="{StaticResource ClassicButton}" x:Name="btnRichiediAmicizia" Canvas.Left="135" Canvas.Top="121" Width="250" Height="50" BorderBrush="Black" BorderThickness="4" FontSize="26" FontFamily="Copperplate Gothic Light" FontWeight="Bold" Foreground="#FFD8D8D8" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Block.TextAlignment="Center" Background="#CC000000" Content="Chiedi amicizia" Click="InviaRichiestaAmicizia"/>
+
+                <Label x:Name="lblErrorGiocaConAmici2" Padding="20,0" Width="591" Height="50" FontSize="23" FontFamily="Copperplate Gothic Light" FontWeight="Bold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="#FF990E0E" Canvas.Left="1194" Canvas.Top="892" Background="White" Opacity="0.9"/>
+
+
+                <Image x:Name="imgNotifica" Width="50" Height="50" Canvas.Left="639" Canvas.Bottom="40" Source="img/notifica.png" Canvas.Top="917" Visibility="Visible"/>
+            </Canvas>
+
+            <Canvas Height="1080" Width="1920" x:Name="Canvas_Classifiche" Visibility="Hidden" IsVisibleChanged="InitalizeCanvasClassifiche">
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnClassificheToHome" Canvas.Right="80" Width="80" Height="80" BorderBrush="{x:Null}" Visibility="Visible" Click="ReturnToMenu" Canvas.Left="1646" Canvas.Top="74">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/backArrow.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Grid x:Name="GridClassifiche" Height="700" Width="1650" Background="White" Opacity="0.9" Canvas.Left="135" Canvas.Top="180">
+                    <Label Height="50" Width="100" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#FF630000" Content="Nome" Background="White" Margin="25,0,0,0"></Label>
+                    <Label Height="50" Width="158" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#FF630000" Content="Punteggio" Background="White" Margin="506,0,0,0" RenderTransformOrigin="-0.505,0.968"></Label>
+                    <Label Height="50" Width="98" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#FF630000" Content="Grado" Background="White" Margin="957,0,0,0" RenderTransformOrigin="0.008,0.619"/>
+
+                    <ListBox x:Name="lstClassifiche" Background="Transparent" Height="600" Width="1600" Visibility="Visible" FontSize="30" Padding="10" MouseDoubleClick="VisualizzaProfiloAmico" >
+                    </ListBox>
+                </Grid>
+
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+
+            </Canvas>
+
+            <Canvas Height="1080" Width="1920" x:Name="Canvas_Replay" Visibility="Hidden" IsVisibleChanged="InitalizeCanvasReplay">
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnReplayToHome" Canvas.Right="80" Width="80" Height="80" BorderBrush="{x:Null}" Visibility="Visible" Click="ReturnToMenu" Canvas.Left="1646" Canvas.Top="74">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/backArrow.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Grid x:Name="GridReplay" Height="700" Width="1650" Background="White" Opacity="0.9" Canvas.Left="135" Canvas.Top="180">
+                    <Label Height="50" Width="178" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#FF630000" Content="Data" Background="White" Margin="25,0,0,0"></Label>
+                    <Label Height="50" Width="300" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#FF630000" Content="Bianco, punteggio" Background="White" Margin="452,0,0,0" RenderTransformOrigin="-0.505,0.968"></Label>
+                    <Label Height="50" Width="300" FontSize="30" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#FF630000" Content="Nero, punteggio" Background="White" Margin="1024,0,0,0" RenderTransformOrigin="-0.505,0.968"/>
+
+                    <ListBox x:Name="lstReplay" Background="Transparent" Height="600" Width="1600" Visibility="Visible" FontSize="30" Padding="10" MouseDoubleClick="VisualizzaReplay"/>
+                </Grid>
+
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+
+            </Canvas>
+
+            <Canvas Height="1080" Width="1920" x:Name="Canvas_ViewReplay" Visibility="Hidden" IsVisibleChanged="InitalizeCanvasViewReplay">
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnViewReplayToHome" Canvas.Right="80" Width="80" Height="80" BorderBrush="{x:Null}" Visibility="Visible" Click="ReturnToMenu" Canvas.Left="1646" Canvas.Top="74">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/backArrow.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnGoNextMove" Canvas.Right="80" Width="50" Height="50" BorderBrush="{x:Null}" Visibility="Visible" Click="ReplayGoNext" Canvas.Left="1422" Canvas.Top="465">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/goNext.png"/>
+                    </Button.Background>
+                </Button>
+                <Button Style="{StaticResource ShowPasswordButton}" x:Name="btnGoBackMove" Canvas.Right="80" Width="50" Height="50" BorderBrush="{x:Null}" Visibility="Visible" Click="ReplayGoBack" Canvas.Left="1422" Canvas.Top="410">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/goBack.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Image Width="120" Height="120" Canvas.Right="750"  Canvas.Bottom="35" Source="img/personal_icon.ico"></Image>
+                <Image Width="150" Height="100" Canvas.Left="750" Canvas.Bottom="40" Source="img/fauser.png"/>
+
+                <Image x:Name="imgAvatarBianco" Width="120" Height="120" Canvas.Right="300"  Canvas.Bottom="220" Source="img/avatar/256_0.png"/>
+                <Label x:Name="lblUsernameBianco" Content="Torre146" Canvas.Left="1500" Canvas.Top="675" Width="400" Height="40" FontSize="30" FontFamily="Copperplate Gothic Light" FontWeight="ExtraBold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="White"/>
+                <Label x:Name="lblPunteggioBianco" Content="1000 " Canvas.Left="1500" Canvas.Top="630" Width="256" Height="40" FontSize="30" FontFamily="Copperplate Gothic Light" FontWeight="ExtraBold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="White" RenderTransformOrigin="0.522,0.009"/>
+                <Label x:Name="lblGradoBianco" Content="Grande Maestro " Canvas.Left="1500" Canvas.Top="585" Width="299" Height="40" FontSize="30" FontFamily="Copperplate Gothic Light" FontWeight="ExtraBold" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="White"/>
+                <Image x:Name="imgAvatarNero" Width="120" Height="120" Canvas.Left="300"  Canvas.Top="100" Source="img/avatar/256_0.png"/>
+                <Label x:Name="lblUsernameNero" Content="torre146 " Canvas.Left="46" Canvas.Top="240" Width="374" Height="40" FontSize="30" FontFamily="Copperplate Gothic Light" FontWeight="ExtraBold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black"/>
+                <Label x:Name="lblPunteggioNero" Content="1000 " Canvas.Left="247" Canvas.Top="285" Width="173" Height="40" FontSize="30" FontFamily="Copperplate Gothic Light" FontWeight="ExtraBold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black" RenderTransformOrigin="0.522,0.009"/>
+                <Label x:Name="lblGradoNero" Content="Grande Maestro " Canvas.Left="46" Canvas.Top="330" Width="374" Height="40" FontSize="30" FontFamily="Copperplate Gothic Light" FontWeight="ExtraBold" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Block.TextAlignment="Center" Foreground="Black"/>
+
+                <Grid x:Name="ScacchieraReplay" Canvas.Left="533" Canvas.Top="50" Height="854"  Width="854">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="106*"/>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="106*"/>
+                        <RowDefinition Height="107*"/>
+                        <RowDefinition Height="107*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="106*"/>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="107*"/>
+                        <ColumnDefinition Width="106*"/>
+                        <ColumnDefinition Width="108*"/>
+                        <ColumnDefinition Width="107*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="img/scacchiera.png"/>
+                    </Grid.Background>
+
+                    <!-- PEZZI BIANCHI -->
+                    <Image x:Name="tBsxR" Width="80" Height="80" Source="img/torreB.png" Grid.Row="7" />
+                    <Image x:Name="cBsxR" Width="80" Height="80" Source="img/cavallosxB.png" Grid.Column="1" Grid.Row="7" />
+                    <Image x:Name="aBsxR" Width="80" Height="80" Source="img/alfiereB.png" Grid.Column="2" Grid.Row="7" />
+                    <Image x:Name="rgBR" Width="80" Height="80" Source="img/reginaB.png" Grid.Column="3" Grid.Row="7" />
+                    <Image x:Name="reBR" Width="80" Height="80" Source="img/reB.png" Grid.Column="4" Grid.Row="7" />
+                    <Image x:Name="aBdxR" Width="80" Height="80" Source="img/alfiereB.png" Grid.Column="5" Grid.Row="7" />
+                    <Image x:Name="cBdxR" Width="80" Height="80" Source="img/cavallodxB.png" Grid.Column="6" Grid.Row="7" />
+                    <Image x:Name="tBdxR" Width="80" Height="80" Source="img/torreB.png" Grid.Column="7" Grid.Row="7" />
+                    <Image x:Name="pB1R" Width="80" Height="80" Source="img/pedoneB.png" Grid.Row="6" />
+                    <Image x:Name="pB2R" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="1" Grid.Row="6" />
+                    <Image x:Name="pB3R" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="2" Grid.Row="6" />
+                    <Image x:Name="pB4R" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="3" Grid.Row="6" />
+                    <Image x:Name="pB5R" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="4" Grid.Row="6" />
+                    <Image x:Name="pB6R" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="5" Grid.Row="6" />
+                    <Image x:Name="pB7R" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="6" Grid.Row="6" />
+                    <Image x:Name="pB8R" Width="80" Height="80" Source="img/pedoneB.png" Grid.Column="7" Grid.Row="6" />
+
+                    <!-- PEZZI NERI -->
+                    <Image x:Name="tNsxR" Width="80" Height="80" Source="img/torreN.png"/>
+                    <Image x:Name="cNsxR" Width="80" Height="80" Source="img/cavallosxN.png" Grid.Column="1" />
+                    <Image x:Name="aNsxR" Width="80" Height="80" Source="img/alfiereN.png" Grid.Column="2" />
+                    <Image x:Name="rgNR" Width="80" Height="80" Source="img/reginaN.png" Grid.Column="3" />
+                    <Image x:Name="reNR" Width="80" Height="80" Source="img/reN.png" Grid.Column="4" />
+                    <Image x:Name="aNdxR" Width="80" Height="80" Source="img/alfiereN.png" Grid.Column="5" />
+                    <Image x:Name="cNdxR" Width="80" Height="80" Source="img/cavallodxN.png" Grid.Column="6" />
+                    <Image x:Name="tNdxR" Width="80" Height="80" Source="img/torreN.png" Grid.Column="7" />
+                    <Image x:Name="pN1R" Width="80" Height="80" Source="img/pedoneN.png" Grid.Row="1" />
+                    <Image x:Name="pN2R" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="1" Grid.Row="1" />
+                    <Image x:Name="pN3R" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="2" Grid.Row="1" />
+                    <Image x:Name="pN4R" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="3" Grid.Row="1" />
+                    <Image x:Name="pN5R" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="4" Grid.Row="1" />
+                    <Image x:Name="pN6R" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="5" Grid.Row="1" />
+                    <Image x:Name="pN7R" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="6" Grid.Row="1" />
+                    <Image x:Name="pN8R" Width="80" Height="80" Source="img/pedoneN.png" Grid.Column="7" Grid.Row="1" />
+                </Grid>
+
+            </Canvas>
+        </Grid>
+    </Viewbox>
+</Window>

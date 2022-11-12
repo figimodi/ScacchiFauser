@@ -1,0 +1,27 @@
+
+ *                   Per generare un certificato autofirmato per il server,
+ *                   aprire il prompt dei comandi degli sviluppatori di Visual
+ *                   Studio, quindi eseguire i seguenti comandi:
+ *                    
+ *                   rem Creazione di chiave privata e certificato autofirmato
+ *                   rem (1.3.6.1.5.5.7.3.1 = ServerAuth)
+ *                   makecert -r -pe -n "CN=Server" -a sha256 -sky signature -cy end -sv self-server.pvk -len 2048 -m 70 -eku 1.3.6.1.5.5.7.3.1 self-server.cer
+ *                   
+ *                   rem Incapsula chiave e certificato in un file .pfx
+ *                   pvk2pfx /pvk self-server.pvk /spc self-server.cer /pfx self-server.pfx
+ *                   
+ *                   rem Copiare "self-server.pfx" nella cartella contenente il file eseguibile del server
+
+
+ *                   Per generare un certificato autofirmato per il client,
+ *                   aprire il prompt dei comandi degli sviluppatori di Visual
+ *                   Studio, quindi eseguire i seguenti comandi:
+ *                    
+ *                   rem Creazione di chiave privata e certificato autofirmato
+ *                   rem (1.3.6.1.5.5.7.3.2 = ClientAuth)
+ *                   makecert -r -pe -n "CN=Utente" -a sha256 -sky signature -cy end -sv self-utente.pvk -len 2048 -m 70 -eku 1.3.6.1.5.5.7.3.2 self-utente.cer
+ *                   
+ *                   rem Incapsula chiave e certificato in un file .pfx
+ *                   pvk2pfx /pvk self-utente.pvk /spc self-utente.cer /pfx self-utente.pfx
+ *                   
+ *                   rem Copiare "self-utente.pfx" nella cartella contenente il file eseguibile del client

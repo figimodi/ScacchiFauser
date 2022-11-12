@@ -1,0 +1,14 @@
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\Eseguibili\ServerTLS.exe.config
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\Eseguibili\ServerTLS.exe
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\Eseguibili\ServerTLS.pdb
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ServerTLS\obj\Release\ServerTLS.csprojResolveAssemblyReference.cache
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ServerTLS\obj\Release\ServerTLS.csproj.CoreCompileInputs.cache
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ServerTLS\obj\Release\ServerTLS.exe
+H:\fau\SistemiReti5\Client-Server SSL-TLS 17-18\ClientServerTLS\ServerTLS\obj\Release\ServerTLS.pdb
+C:\Users\Filippo\Desktop\SSL\Eseguibili\ServerTLS.exe.config
+C:\Users\Filippo\Desktop\SSL\Eseguibili\ServerTLS.exe
+C:\Users\Filippo\Desktop\SSL\Eseguibili\ServerTLS.pdb
+C:\Users\Filippo\Desktop\SSL\ServerTLS\obj\Release\ServerTLS.csprojAssemblyReference.cache
+C:\Users\Filippo\Desktop\SSL\ServerTLS\obj\Release\ServerTLS.csproj.CoreCompileInputs.cache
+C:\Users\Filippo\Desktop\SSL\ServerTLS\obj\Release\ServerTLS.exe
+C:\Users\Filippo\Desktop\SSL\ServerTLS\obj\Release\ServerTLS.pdb

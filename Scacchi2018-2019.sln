@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{824AED8A-0F09-4E9C-9401-5FEA3ED2CA1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{05B0B523-F8B1-42C2-B009-E3A59F46AF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseManager", "DatabaseManager\DatabaseManager.csproj", "{61CE1473-EFA2-4669-83E0-2A5764A3B08F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{824AED8A-0F09-4E9C-9401-5FEA3ED2CA1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{824AED8A-0F09-4E9C-9401-5FEA3ED2CA1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{824AED8A-0F09-4E9C-9401-5FEA3ED2CA1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{824AED8A-0F09-4E9C-9401-5FEA3ED2CA1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05B0B523-F8B1-42C2-B009-E3A59F46AF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B0B523-F8B1-42C2-B009-E3A59F46AF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B0B523-F8B1-42C2-B009-E3A59F46AF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B0B523-F8B1-42C2-B009-E3A59F46AF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61CE1473-EFA2-4669-83E0-2A5764A3B08F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61CE1473-EFA2-4669-83E0-2A5764A3B08F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61CE1473-EFA2-4669-83E0-2A5764A3B08F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61CE1473-EFA2-4669-83E0-2A5764A3B08F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {646081E3-B0A0-4EEF-97BB-6681C7AE4732}
+	EndGlobalSection
+EndGlobal
